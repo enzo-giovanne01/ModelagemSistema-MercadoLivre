@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Raio-X do Sistema: Mercado Livre</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Raio-X do Sistema: Mercado Livre</h1>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#caminho">Caminho Principal</a></li>
+                    <li><a href="#dados">Organização dos Dados</a></li>
+                    <li><a href="#atores">Papéis e Responsabilidades</a></li>
+                    <li><a href="#melhorias">Sugestões de Melhorias</a></li>
+                    <li><a href="#ux">Experiência do Usuário (UX)</a></li>
+                    <li><a href="#conectividade">Conectividade</a></li>
+                    <li><a href="#modelagem">Modelagem</a></li>
+                    <li><a href="#teoria">Conexão com a Teoria</a></li>
+                    <li><a href="#requisitos">Requisitos</a></li>
+                    <li><a href="#regras">Regras de Negócio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" role="main">
+        <section id="introducao" tabindex="-1">
+            <h2>🌟 Introdução</h2>
+            <p>
+                O Mercado Livre é a maior plataforma de e-commerce da América Latina, líder em volume de transações online, atuando em diversos países da região. A plataforma oferece uma solução completa que integra a compra e venda de produtos, pagamentos seguros via Mercado Pago, e um sistema de logística próprio chamado Mercado Envios. 
+            </p>
+            <p>
+                O objetivo deste documento é mapear o funcionamento interno do sistema, detalhando os processos principais, organização dos dados, atores envolvidos, pontos fortes, desafios atuais e sugestões de melhoria para otimizar a experiência dos usuários e a eficiência operacional da plataforma.
+            </p>
+        </section>
+
+        <section id="caminho" tabindex="-1">
+            <h2>✅ Caminho Principal</h2>
+            <p>O processo típico de compra inclui:</p>
+            <ol>
+                <li>Busca e seleção do produto;</li>
+                <li>Adição ao carrinho ou compra imediata;</li>
+                <li>Pagamento via Mercado Pago;</li>
+                <li>Confirmação do pedido;</li>
+                <li>Envio pelo vendedor com Mercado Envios;</li>
+                <li>Recebimento e confirmação pelo comprador;</li>
+                <li>Avaliação do vendedor.</li>
+            </ol>
+        </section>
+
+        <section id="dados" tabindex="-1">
+            <h2>🗂️ Organização dos Dados</h2>
+            <p>O sistema mantém dados organizados para garantir escalabilidade e integridade, destacando:</p>
+            <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Entidade</th>
+                        <th>Principais Atributos</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Usuário</td>
+                        <td>ID, nome, e-mail, endereço, tipo (comprador/vendedor), CPF, telefone, histórico</td>
+                        <td>Perfil e autenticação</td>
+                    </tr>
+                    <tr>
+                        <td>Produto</td>
+                        <td>Código SKU, nome, descrição, preço, estoque, categoria, imagens</td>
+                        <td>Catálogo para busca e filtragem</td>
+                    </tr>
+                    <tr>
+                        <td>Pedido</td>
+                        <td>Número, itens, status, data, código rastreamento</td>
+                        <td>Registro da compra</td>
+                    </tr>
+                    <tr>
+                        <td>Pagamento</td>
+                        <td>Método, valor, parcelas, status, data</td>
+                        <td>Controle financeiro</td>
+                    </tr>
+                    <tr>
+                        <td>Entrega</td>
+                        <td>Código logístico, transportadora, status, prazo, endereço</td>
+                        <td>Rastreamento</td>
+                    </tr>
+                    <tr>
+                        <td>Avaliação</td>
+                        <td>Nota, comentários, data, vendedor e comprador avaliados</td>
+                        <td>Feedback para confiança</td>
+                    </tr>
+                </tbody>
+            </table>
+            <figure>
+                <img src="Imagens/diagrama(mercado livre).png" alt="Diagrama BPMN do Mercado Livre" style="width: 100%; max-width: 700px; margin-top: 1rem;" />
+                <figcaption style="font-style: italic; font-size: 0.9rem;">Diagrama BPMN do Mercado Livre</figcaption>
+            </figure>
+        </section>
+
+        <section id="atores" tabindex="-1">
+            <h2>👥 Papéis e Responsabilidades</h2>
+            <dl>
+                <dt><strong>Comprador</strong></dt>
+                <dd>Busca produtos, realiza pedidos, acompanha entregas e avalia vendedores.</dd>
+
+                <dt><strong>Vendedor</strong></dt>
+                <dd>Cadastra produtos, gerencia estoque, processa pedidos e realiza envios.</dd>
+
+                <dt><strong>Plataforma</strong></dt>
+                <dd>Gerencia transações, pagamentos, logística e reputação.</dd>
+
+                <dt><strong>Transportadora</strong></dt>
+                <dd>Executa entregas e atualiza rastreamento.</dd>
+            </dl>
+        </section>
+
+        <section id="melhorias" tabindex="-1">
+            <h2>💡 Sugestões de Melhorias</h2>
+            <ul>
+                <li>Visualização 3D e Realidade Aumentada para produtos.</li>
+                <li>Chat com IA para suporte 24/7.</li>
+                <li>Retirada em pontos físicos parceiros.</li>
+                <li>Alertas personalizados por perfil de compra.</li>
+                <li>Otimização para picos de acesso (Black Friday, etc).</li>
+            </ul>
+        </section>
+
+        <section id="ux" tabindex="-1">
+            <h2>📱 Experiência do Usuário (UX)</h2>
+            <h3>Pontos Fortes</h3>
+            <ul>
+                <li>Interface intuitiva e recomendações eficazes.</li>
+                <li>Filtros avançados e processo de checkout simplificado.</li>
+            </ul>
+            <h3>Problemas</h3>
+            <ul>
+                <li>Excesso de anúncios e lentidão em picos.</li>
+                <li>Dificuldade para usuários menos experientes.</li>
+            </ul>
+            <h3>Soluções</h3>
+            <ul>
+                <li>Modo escuro e busca inteligente.</li>
+                <li>Layout minimalista para dispositivos móveis.</li>
+                <li>Redução do impacto dos anúncios.</li>
+            </ul>
+        </section>
+
+        <section id="conectividade" tabindex="-1">
+            <h2>↺ Conectividade e Integrações</h2>
+            <ul>
+                <li><strong>Mercado Pago:</strong> múltiplas formas de pagamento seguras.</li>
+                <li><strong>Mercado Envios:</strong> logística automatizada com rastreamento.</li>
+                <li><strong>APIs abertas:</strong> integração com ERPs e ferramentas.</li>
+                <li><strong>Sistemas antifraude:</strong> monitoramento em tempo real.</li>
+            </ul>
+        </section>
+
+        <section id="modelagem" tabindex="-1">
+            <h2>📊 Modelagem do Sistema</h2>
+            <ul>
+                <li>Casos de uso: busca, compra, autenticação, acompanhamento, avaliação e gestão de estoque.</li>
+                <li>Diagrama de classes: Usuário, Produto, Pedido, Pagamento, Entrega e Avaliação.</li>
+                <li>Diagrama BPMN: fluxo de compra detalhado, incluindo decisões importantes.</li>
+            </ul>
+        </section>
+
+        <section id="teoria" tabindex="-1">
+            <h2>📖 Fundamentação Teórica</h2>
+            <p>
+                Foram usados BPMN para processos, princípios de UX para experiência do usuário, além de segurança da informação e metodologias ágeis para o desenvolvimento contínuo.
+            </p>
+        </section>
+
+        <section id="requisitos" tabindex="-1">
+            <h2>📊 Requisitos do Sistema</h2>
+            <h3>Requisitos Funcionais</h3>
+            <ul>
+                <li>Busca e filtros avançados.</li>
+                <li>Cadastro e autenticação de usuários.</li>
+                <li>Compra com pagamento integrado.</li>
+                <li>Gestão de pedidos, estoque e status.</li>
+                <li>Acompanhamento detalhado para comprador.</li>
+                <li>Avaliação de vendedores e produtos.</li>
+                <li>Gerenciamento de devoluções e reclamações.</li>
+            </ul>
+            <h3>Requisitos Não-Funcionais</h3>
+            <ul>
+                <li>Alta disponibilidade (99,9%).</li>
+                <li>Resposta rápida (< 3s).</li>
+                <li>Compatibilidade móvel e web.</li>
+                <li>Segurança avançada (criptografia, autenticação multifator).</li>
+                <li>Escalabilidade para grande volume de usuários.</li>
+                <li>Backup automático e recuperação rápida.</li>
+            </ul>
+        </section>
+
+        <section id="regras" tabindex="-1">
+            <h2>⚖️ Regras de Negócio</h2>
+            <ul>
+                <li>Pagamento ao vendedor liberado após confirmação de entrega.</li>
+                <li>Reclamações negativas afetam reputação e visibilidade do vendedor.</li>
+                <li>Bloqueio automático de compradores fraudulentos.</li>
+                <li>Obrigação de vendedores manterem estoque e cumprirem prazos.</li>
+                <li>Promoções regidas por regras específicas.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - Análise Acadêmica do Sistema Mercado Livre</p>
+        </div>
+    </footer>
+</body>
+</html>
